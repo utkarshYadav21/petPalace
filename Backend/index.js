@@ -4,7 +4,7 @@ require('./db/config');
 const authRoutes=require('./routes/authRoutes');
 const petRoutes=require('./routes/petRoutes');
 const donateRoutes=require('./routes/donateRoute');
-const stripe = require("stripe")('sk_test_51OfysrSHDYZD3Q5cI1UJZxVEuhVZQeyozm7hQgzuy9foNS4bmu1vYD0ilJmWZyXTAsSA2H00QPVN25iLulo7qVSs00CJPUSAfJ');
+const stripe = require("stripe")('PUT YOUR OWN STRIPE API KEY');
 
 const cors=require('cors')
 
