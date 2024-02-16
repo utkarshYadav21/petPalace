@@ -4,7 +4,7 @@ require('./db/config');
 const authRoutes=require('./routes/authRoutes');
 const petRoutes=require('./routes/petRoutes');
 const donateRoutes=require('./routes/donateRoute');
-const stripe = require("stripe")('PUT YOUR OWN STRIPE API KEY');
+const stripe = require("stripe")('PUT YOUR OWN STRIPE KEY');
 
 const cors=require('cors')
 
