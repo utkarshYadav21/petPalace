@@ -58,7 +58,7 @@ Welcome to our Pet Adoption Web App repository! This web application allows user
 
 ### Running the application
 
-5. Run the frontend and backend:
+1. Run the frontend and backend:
 
     ```bash
     # Start the frontend server
