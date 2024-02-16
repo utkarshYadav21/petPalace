@@ -1,0 +1,72 @@
+.home-sec {
+    padding: 100px 0;
+}
+
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content .home-info {
+    max-width: 500px;
+    padding: 20px;
+}
+
+.home-content .home-info h2 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.home-content .home-info h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.home-content .home-info h3 span {
+    color: #303054;
+}
+
+.home-content .home-info p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons .btn1 {
+    font-size: 1rem;
+    font-weight: 400;
+    background: #a99958;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.buttons .btn1:hover {
+    background-color: #e6edff;
+    color: #303054;
+    cursor: pointer;
+}
+
+.img-sec img {
+    width: 350px;
+    border-radius: 10%;
+    margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column-reverse;
+    }
+
+    .home-content .home-info {
+        text-align: center;
+    }
+}

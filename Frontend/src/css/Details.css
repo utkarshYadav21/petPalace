@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+.pet-details-container {
+    margin-top: 40px;
+    padding-bottom: 10px;
+    max-width: 50%;
+    margin: auto;
+    padding: 0 5px;
+}
+
+.pet-image {
+    margin-top: 30px;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.my-title {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.pet-info {
+    color: #626161ea;
+    margin-bottom: 5px;
+}
+
+.pet-section {
+    margin-top: 20px;
+}
+
+.my-subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-left: 4px solid #a99958;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.my-btn {
+    background-color: #a99958;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.adoption-form {
+    height: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1000;
+}
+
+.close-btn {
+    background-color: #a99958;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top:-10px;
+    right: 10px;
+    padding: 10px;
+}
+.form-top-div{
+    margin-top: 40px;
+}
+.font-bold{
+    margin-top: 10px;
+}
+.request-input-field {
+    width: 95%;
+    margin: 8px 0;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color:  #a99958;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.textarea{
+    height: 80px;
+    margin-top: 8px;
+}
+.adoption-request-btn{
+    background-color: #a99958;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}

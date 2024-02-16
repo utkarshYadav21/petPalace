@@ -1,0 +1,35 @@
+
+.footer-top{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    margin-top: 20px;
+    height: fit-content;
+    background-color: #637a7a;
+}
+.footer-top-left{
+    width: 300px;
+}
+.footer-adopt-btn{
+    margin-top: 10px;
+    background-color: #a99958;
+}
+.footer-left-content{
+    margin-top: 3px;
+}
+.footer-top-center{
+    width: 400px;
+}
+.footer-top-right{
+    display: flex;
+    width: 140px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.footer-bottom {
+    background-color: #637a7a;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}

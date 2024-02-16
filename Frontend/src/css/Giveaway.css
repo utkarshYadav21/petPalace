@@ -1,0 +1,87 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    background: #cfcccc;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+a,
+p,
+input,
+label,
+button,
+div,
+footer {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #444;
+}
+
+.login-register-div {
+    margin-top: 28px;
+}
+
+.btn {
+    border-radius: 36px;
+    background: #FEE996;
+}
+
+form h2 {
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.giveaway-form {
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2); /* Increased box shadow */
+    border-radius: 10px;
+    background: #cfcccc;
+}
+
+.giveaway-input,
+textarea {
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+textarea[name="Description"],
+textarea[name="Address"] {
+    height: 150px; 
+}
+
+.giveaway-label {
+    display: block;
+    margin: 15px 0 10px;
+}
+
+button {
+    margin-top: 20px;
+    border-radius: 36px;
+    background: #FEE996;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8em;
+    display: block;
+    padding: 10px 16px;
+    letter-spacing: 2px;
+}

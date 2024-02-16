@@ -1,0 +1,118 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar-container {
+    background-color: #637a7a;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    font-size: larger;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    font-weight:1000;
+    font-size: 22px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section a {
+    margin-left: 15px;
+}
+.intro{
+    width: 100%;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bolder;
+}
+span{
+    color: #b68337;
+}
+.intro-container{
+    margin-top: 40px;
+}
+.intro-des{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+.adopt-btn{
+    border-radius: 36px;
+    background: #a99958;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.adopt-div{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+.adopt-content{
+    margin-top: 8px;
+    width: 750px;
+}
+.adopt-img{
+    height: 200px;
+    border-radius: 30px;
+}
+.outro-img{
+    border-radius: 30px;
+    width: 300px;
+}
+.giveaway-div{
+    width: 920px;
+    text-align: right;
+    margin-left: 370px;
+    margin-top: 50px;
+}
+.giveaway-btn{
+    position: absolute;
+    right: 100px;
+    background: #a99958;
+    cursor: pointer;
+}
+.outro{
+    margin-top: 110px;
+    display: flex;
+    justify-content: space-around;
+}
+.outro-content{
+    width: 750px;
+    text-align: right;
+}
+.outro-head{
+    text-align: right;
+}
