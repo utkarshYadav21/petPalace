@@ -18,6 +18,8 @@ Please note that error handling is not fully implemented in this version of the 
 
 - **Protected Routes:** Access to the adoption and pet details pages is restricted to logged-in users only.
 
+- **Searching:** User can search the breed of the pets that they want to adopt from the given list.
+
 ## Demo
 
 https://github.com/utkarshYadav21/petPalace/assets/145287711/b0ba2046-c8b3-4dbb-b08f-805074b36c96
