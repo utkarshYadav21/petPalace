@@ -2,6 +2,10 @@
 
 Welcome to our Pet Adoption Web App repository! This web application allows users to adopt pets, give away pets for adoption, and make donations. It is built using React, Node.js, Express.js, MongoDB, and Mongoose.
 
+## Disclaimer
+
+Please note that error handling is not fully implemented in this version of the Pet Adoption Web App. Some errors may be logged to the console but are not yet gracefully handled in the user interface. Future updates will address this issue and provide better error handling. Also the styling of some components is not perfect for now, it will be changed in near future.
+
 ## Features
 
 - **User Authentication:** Users can register and login securely. Authentication is done using JWT tokens stored in local storage.
@@ -13,6 +17,10 @@ Welcome to our Pet Adoption Web App repository! This web application allows user
 - **Donation:** Donation functionality is implemented using Stripe.js.
 
 - **Protected Routes:** Access to the adoption and pet details pages is restricted to logged-in users only.
+
+## Demo
+
+https://github.com/utkarshYadav21/petPalace/assets/145287711/b0ba2046-c8b3-4dbb-b08f-805074b36c96
 
 ## Technologies Used
 
