@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "../css/Giveaway.css"
+import { useNavigate } from "react-router-dom";
 
 
 const GiveawayForm = () => {
-  const [image,setImage]=useState("")
+  const [image,setImage]=useState("");
+  const navigate=useNavigate()
   const [formData, setFormData] = useState({
     type: "",
     breed: "",
@@ -43,6 +45,7 @@ const GiveawayForm = () => {
     });
     const result = await pet.json();
     console.log(result);
+    navigate('/');
   };
 
   return (
