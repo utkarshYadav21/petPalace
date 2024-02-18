@@ -9,3 +9,6 @@
     height: auto;
     border-radius: 8px;
 }
+.pet-details-btn{
+    cursor: pointer;
+}

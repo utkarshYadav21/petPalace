@@ -17,6 +17,9 @@ const RequestSchema=mongoose.Schema({
     Address:{
         type:String,
         required:true
+    },
+    petId:{
+        type:String
     }
 })
 

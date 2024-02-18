@@ -11,7 +11,7 @@ const PetSection = ({ title, pets }) => {
             <PetCard
               key={pet._id}
               id={pet._id}
-              image={pet.base64}
+              image={pet.image}
               breed={pet.breed}
               age={pet.age}
             />

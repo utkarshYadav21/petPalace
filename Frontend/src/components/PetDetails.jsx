@@ -27,7 +27,7 @@ const PetDetails = () => {
     e.preventDefault();
     let result=await fetch(`http://localhost:3000/adopt/${id}`,{
       method:'post',
-      body:JSON.stringify({name,email,phone,address}),
+      body:JSON.stringify({name,email,phone,address,id}),
       headers:{
         'Content-Type':'application/json',
         'Authorization': `Bearer ${localStorage.getItem('jwt')}`,
@@ -48,7 +48,12 @@ const PetDetails = () => {
         authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
     });
+    if (data.status === 401) {
+      navigate("/login");
+      return;
+    }
     const { pet } = await data.json();
+    console.log(pet);
     setPet(pet);
   };
   const openModal = () => {
@@ -60,20 +65,20 @@ const PetDetails = () => {
   };
   return (
     <div className="pet-details-container">
-      <img className="pet-image" src="" alt="pet-image" />
+      <img className="pet-image" src={pet.image} alt="pet-image" />
       <p className="pet-title my-title">{pet.breed}</p>
       <p className="pet-info">Age: {pet.age}</p>
-      <p className="pet-info">Category: {pet.type}</p>
+      <p className="pet-info">Category: {pet.petType}</p>
       <p className="pet-info">{pet.address}</p>
 
       <div className="pet-section">
         <h1 className="pet-subtitle my-subtitle">Pet Owner Info</h1>
-        <p className="pet-info">{pet.owner}</p>
+        <p className="pet-info">{pet.petOwner}</p>
       </div>
 
       <div className="pet-section">
         <h2 className="pet-subtitle my-subtitle">Pet Description</h2>
-        <p className="pet-info">{pet.description}</p>
+        <p className="pet-info">{pet.petDescription}</p>
       </div>
 
       <div className="pet-section">

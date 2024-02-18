@@ -7,6 +7,7 @@ const verifyToken=(req,res,next)=>{
         jwt.verify(token,"pet_adoption",(err,decodedToken)=>{
             if(err){
                 console.log(err.message);
+                return res.status(401).json({ error: 'Invalid token. Please login again.' });
             }
             else{
                 next()

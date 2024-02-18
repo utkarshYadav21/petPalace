@@ -18,49 +18,50 @@ module.exports.giveaway_post = async (req, res) => {
 };
 
 module.exports.adopt_get = async (req, res) => {
-  let Dogs = await Pets.find({ type: "Dog" });
-  let Cats = await Pets.find({ type: "Cat" });
-  let Birds = await Pets.find({ type: "Bird" });
-  let Rabbits = await Pets.find({ type: "Rabbit" });
-  let Mouses = await Pets.find({ type: "Mouse" });
-  let Hamsters = await Pets.find({ type: "Hamster" });
+  let Dogs = await Pets.find({ petType: "Dog" });
+  let Cats = await Pets.find({ petType: "Cat" });
+  let Birds = await Pets.find({ petType: "Bird" });
+  let Rabbits = await Pets.find({ petType: "Rabbit" });
+  let Mouses = await Pets.find({ petType: "Mouse" });
+  let Hamsters = await Pets.find({ petType: "Hamster" });
   res.status(200).json({ Dogs, Cats, Birds, Rabbits, Mouses, Hamsters });
 };
 module.exports.search_get = async (req, res) => {
   let Dogs = await Pets.find({
-    $and: [{ type: "Dog" }, { breed: { $regex: req.params.key } }],
+    $and: [{ petType: "Dog" }, { breed: { $regex: req.params.key } }],
   });
   let Cats = await Pets.find({
-    $and: [{ type: "Cat" }, { breed: { $regex: req.params.key } }],
+    $and: [{ petType: "Cat" }, { breed: { $regex: req.params.key } }],
   });
   let Birds = await Pets.find({
-    $and: [{ type: "Bird" }, { breed: { $regex: req.params.key } }],
+    $and: [{ petType: "Bird" }, { breed: { $regex: req.params.key } }],
   });
   let Rabbits = await Pets.find({
-    $and: [{ type: "Rabbit" }, { breed: { $regex: req.params.key } }],
+    $and: [{ petType: "Rabbit" }, { breed: { $regex: req.params.key } }],
   });
   let Mouses = await Pets.find({
-    $and: [{ type: "Mouse" }, { breed: { $regex: req.params.key } }],
+    $and: [{ petType: "Mouse" }, { breed: { $regex: req.params.key } }],
   });
   let Hamsters = await Pets.find({
-    $and: [{ type: "Hamster" }, { breed: { $regex: req.params.key } }],
+    $and: [{ petType: "Hamster" }, { breed: { $regex: req.params.key } }],
   });
   res.status(200).json({ Dogs, Cats, Birds, Rabbits, Mouses, Hamsters });
 };
 module.exports.adopt_single_get = async (req, res) => {
   let pet = await Pets.findOne({ _id: req.params.id });
+  console.log(pet);
   res.send({ pet: pet });
 };
 
 module.exports.adopt_post = async (req, res) => {
-  const id=req.params.id;
-  const { name, email, phone, address } = req.body;
+  const { name, email, phone, address ,id} = req.body;
   try {
     let request = new Requests({
       Name: name,
       Email: email,
       Phone_Number: phone,
       Address: address,
+      petId:id
     });
     request = await request.save();
     if(request){

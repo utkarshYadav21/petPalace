@@ -17,9 +17,6 @@ const petSchema=mongoose.Schema({
         type:Number,
         required:true
     },
-    quantity:{
-        type:Number,
-    },
     petOwner:{
         type:String,
         required:true
