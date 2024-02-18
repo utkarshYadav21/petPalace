@@ -18,6 +18,10 @@ Please note that error handling is not fully implemented in this version of the 
 
 - **Protected Routes:** Access to the adoption and pet details pages is restricted to logged-in users only.
 
+## Demo
+
+https://github.com/utkarshYadav21/petPalace/assets/145287711/b0ba2046-c8b3-4dbb-b08f-805074b36c96
+
 ## Technologies Used
 
 - **Frontend:** React
