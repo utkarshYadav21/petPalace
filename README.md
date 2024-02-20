@@ -42,10 +42,12 @@ https://github.com/utkarshYadav21/petPalace/assets/145287711/b0ba2046-c8b3-4dbb-
     # Navigate to the frontend directory
     cd frontend
     npm install
+    npm run dev
 
     # Navigate to the backend directory
     cd ../backend
     npm install
+    npm start
     ```
 
 3. Set up MongoDB database and configure the connection URI in the backend.
