@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import "../css/Giveaway.css"
+import "../css/Giveaway.css";
 import { useNavigate } from "react-router-dom";
 
-
 const GiveawayForm = () => {
-  const [image,setImage]=useState("");
-  const navigate=useNavigate()
+  const [image, setImage] = useState("");
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     type: "",
     breed: "",
@@ -27,7 +26,7 @@ const GiveawayForm = () => {
     const reader = new FileReader();
     reader.readAsDataURL(e.target.files[0]);
     reader.onload = () => {
-      setImage(reader.result)
+      setImage(reader.result);
     };
     reader.onerror = (err) => {
       console.log(err);
@@ -37,7 +36,7 @@ const GiveawayForm = () => {
   const addPet = async () => {
     const pet = await fetch("http://localhost:3000/giveaway", {
       method: "POST",
-      body: JSON.stringify({formData:formData,image:image}),
+      body: JSON.stringify({ formData: formData, image: image }),
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("jwt")}`,
@@ -45,7 +44,7 @@ const GiveawayForm = () => {
     });
     const result = await pet.json();
     console.log(result);
-    navigate('/');
+    navigate("/");
   };
 
   return (
@@ -54,16 +53,38 @@ const GiveawayForm = () => {
         <h2>Giveaway</h2>
         {Object.entries(formData).map(([key, value]) => (
           <div key={key}>
-            <label htmlFor={key} className="giveaway-label">{key.charAt(0).toUpperCase() + key.slice(1)}</label>
+            <label htmlFor={key} className="giveaway-label">
+              {key.charAt(0).toUpperCase() + key.slice(1)}
+            </label>
             {key === "description" ? (
-              <textarea name={key} value={value} onChange={handleChange} required />
+              <textarea
+                name={key}
+                value={value}
+                onChange={handleChange}
+                required
+              />
             ) : (
-              <input type="text" name={key} value={value} onChange={handleChange} required className="giveaway-input"/>
+              <input
+                type="text"
+                name={key}
+                value={value}
+                onChange={handleChange}
+                required
+                className="giveaway-input"
+              />
             )}
           </div>
         ))}
-        <label htmlFor="Image" className="giveaway-label">Image</label>
-        <input accept="image/*" type="file" name="image" onChange={convertToBase64} className="giveaway-input"/>
+        <label htmlFor="Image" className="giveaway-label">
+          Image
+        </label>
+        <input
+          accept="image/*"
+          type="file"
+          name="image"
+          onChange={convertToBase64}
+          className="giveaway-input"
+        />
         <button type="button" onClick={addPet}>
           Give
         </button>
